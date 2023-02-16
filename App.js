@@ -3,11 +3,12 @@ import React from "react";
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from '@react-navigation/stack';
 
-import Register from "./Register";
-import Login from "./Login";
-import ActionBarImage from "./ActionBarImage";
-import ProfileBarImage from "./ProfileBarImage";
+import Register from "./Log-out/Register";
+import ActionBarImage from "./Header/ActionBarImage";
+import ProfileBarImage from "./Header/ProfileBarImage";
 import Profile from "./Profile";
+import Login from "./Log-out/Login";
+import Home from "./Log-In/Home";
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -15,16 +16,16 @@ export default function App() {
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Login">
                 <Stack.Screen  name="Login" component={Login}
-                                options={{
-                                    headerStyle: {
-                                        backgroundColor: '#ffffff',
-                                        boxShadow: 'none',
-                                        elevation: 0,
-                                    },
-                                    headerTitleStyle: {
-                                        color: '#ffffff',
-                                    },
-                                }}
+                               options={{
+                                   headerStyle: {
+                                       backgroundColor: '#ffffff',
+                                       boxShadow: 'none',
+                                       elevation: 0,
+                                   },
+                                   headerTitleStyle: {
+                                       color: '#ffffff',
+                                   },
+                               }}
                 />
                 <Stack.Screen name="Register" component={Register}
                               options={{
@@ -38,7 +39,7 @@ export default function App() {
                                   },
                               }}
                 />
-                <Stack.Screen name="home" component={ActionBarImage}s
+                <Stack.Screen name="home" component={Home}
                               options={({navigation}) => ({
                                   headerLeft: () => <ActionBarImage />,
                                   headerRight: () => <ProfileBarImage navigation={navigation} />,

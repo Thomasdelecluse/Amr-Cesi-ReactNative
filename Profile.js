@@ -1,6 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-import Login from "./Login";
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 function Profile({navigation}) {
     return (

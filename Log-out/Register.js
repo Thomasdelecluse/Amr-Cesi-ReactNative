@@ -41,7 +41,7 @@ function Register({navigation}) {
                     maxLength={30}
                     secureTextEntry={true}
                 />
-                <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('Login')}>
+                <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('Home')}>
                     <Text style={styles.buttonText}>Enregistrer</Text>
                 </TouchableOpacity>
             </View>
